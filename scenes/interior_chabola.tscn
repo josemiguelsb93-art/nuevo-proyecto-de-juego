@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk211bwwlc1ua"]
+
+[ext_resource type="Texture2D" uid="uid://b2cpwach5etah" path="res://mi creacion/chabola.png" id="1_lthgl"]
+[ext_resource type="PackedScene" uid="uid://im77ys8xjax8" path="res://scenes/Personaje.tscn" id="2_02j7r"]
+[ext_resource type="Script" uid="uid://ivvfbjau36nh" path="res://scenes/puertasalida.gd" id="3_inf3y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abvlw"]
+size = Vector2(16, 9)
+
+[node name="interior_chabola" type="Node2D"]
+
+[node name="fondo" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+texture = ExtResource("1_lthgl")
+
+[node name="SpawnPoint" type="Marker2D" parent="fondo" groups=["spawn"]]
+position = Vector2(-24, 24)
+
+[node name="Personje" parent="." instance=ExtResource("2_02j7r")]
+position = Vector2(-15, 1)
+
+[node name="puertasalida" type="Area2D" parent="."]
+script = ExtResource("3_inf3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puertasalida"]
+position = Vector2(-24, 43)
+shape = SubResource("RectangleShape2D_abvlw")

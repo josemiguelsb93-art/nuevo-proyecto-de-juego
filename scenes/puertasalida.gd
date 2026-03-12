@@ -6,7 +6,7 @@ func _ready():
 
 func _on_body_entered(body):
 	print("SALIDA - Algo toco la puerta: ", body.name)
-	if body.name == "CharacterBody2D":  # ← CAMBIADO AQUÍ
+	if body.name == "CharacterBody2D":
 		print("SALIDA - Es el personaje! Cambiando escena...")
 		call_deferred("cambiar_escena", "res://scenes/mundo.tscn")
 	else:

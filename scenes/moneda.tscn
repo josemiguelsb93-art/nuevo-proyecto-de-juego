@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpw2i0v5hlawt"]
+
+[ext_resource type="Texture2D" uid="uid://cuq20ps75jyql" path="res://interfaz/moneda_bronce.png" id="1_47csj"]
+[ext_resource type="Script" uid="uid://b2gbqucjcpmu4" path="res://scenes/moneda.gd" id="1_r2l3b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r2l3b"]
+radius = 18.027756
+
+[node name="Area2D" type="Area2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_r2l3b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("1_47csj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
+scale = Vector2(3.695, 3.695)
+shape = SubResource("CircleShape2D_r2l3b")

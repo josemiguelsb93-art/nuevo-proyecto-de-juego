@@ -1,0 +1,173 @@
+[gd_scene load_steps=12 format=3 uid="uid://borltw157up1b"]
+
+[ext_resource type="Script" uid="uid://c4arxgnlqqg7b" path="res://scenes/dialogo_ui.gd" id="1_3r1ne"]
+[ext_resource type="Texture2D" uid="uid://cd5k0oh5k1fth" path="res://panel de texto.png" id="2_jdcej"]
+[ext_resource type="FontFile" uid="uid://p2jr8kyk8e7x" path="res://fonts/alagard.ttf" id="3_lv1a4"]
+[ext_resource type="Texture2D" uid="uid://kkjg806ekies" path="res://interfaz/paneleleccion.png" id="4_dpm2q"]
+[ext_resource type="Texture2D" uid="uid://i1n2faqkjolc" path="res://interfaz/paneleleccionselector.png" id="5_syd8f"]
+[ext_resource type="Texture2D" uid="uid://c0afdo5c3hpp6" path="res://interfaz/minijuegorobar.png" id="6_upycb"]
+[ext_resource type="Texture2D" uid="uid://4bs5qncnehhs" path="res://interfaz/zonaacierto.png" id="7_41k1q"]
+[ext_resource type="Texture2D" uid="uid://07dsqufcbiax" path="res://interfaz/moneda_oro.png" id="8_h0vgw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h73ye"]
+font = ExtResource("3_lv1a4")
+font_size = 28
+font_color = Color(1.0346054, 0.53299296, 1.6066606e-05, 1)
+outline_color = Color(0.93132, 0.83526444, 0.34819052, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_36o2c"]
+font = ExtResource("3_lv1a4")
+font_size = 23
+font_color = Color(1, 0.5137255, 0.23137255, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jdcej"]
+font = ExtResource("3_lv1a4")
+font_color = Color(0.00012632269, 0.0001251819, 0, 1)
+
+[node name="DialogoUI" type="CanvasLayer"]
+script = ExtResource("1_3r1ne")
+
+[node name="PanelDialogo" type="Panel" parent="."]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.94000006
+offset_left = 140.0
+offset_top = 517.0
+offset_right = -194.0
+offset_bottom = -28.120056
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="RetratoPNG" type="TextureRect" parent="PanelDialogo"]
+layout_mode = 0
+offset_left = 603.0
+offset_top = -475.0
+offset_right = 1531.0
+offset_bottom = 645.0
+scale = Vector2(0.505, 0.505)
+
+[node name="PanelDeTexto" type="Sprite2D" parent="PanelDialogo"]
+position = Vector2(446, 8.9999695)
+scale = Vector2(8.757, 3.715)
+texture = ExtResource("2_jdcej")
+
+[node name="NombreLabel" type="Label" parent="PanelDialogo"]
+layout_mode = 0
+offset_left = 84.0
+offset_top = -57.0
+offset_right = 288.0
+offset_bottom = -8.0
+rotation = -0.0060675815
+text = "ROLF"
+label_settings = SubResource("LabelSettings_h73ye")
+
+[node name="DialogoLabel" type="Label" parent="PanelDialogo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.055000003
+offset_left = 35.0
+offset_top = -28.0
+offset_right = 805.575
+offset_bottom = 108.0
+text = "Me pica la espalda, si me consigues un rastrillo te doy una poción para quitar las ladillas"
+label_settings = SubResource("LabelSettings_36o2c")
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="IndicadorLabel" type="Label" parent="PanelDialogo"]
+layout_mode = 1
+offset_left = 570.0
+offset_top = 69.0
+offset_right = 850.0
+offset_bottom = 104.0
+text = "▼ "
+label_settings = SubResource("LabelSettings_jdcej")
+horizontal_alignment = 2
+
+[node name="paneleleccion" type="TextureRect" parent="."]
+offset_left = 532.0
+offset_top = -78.0
+offset_right = 1387.0
+offset_bottom = 629.0
+texture = ExtResource("4_dpm2q")
+
+[node name="LabelHablar" type="Label" parent="paneleleccion"]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 282.0
+offset_right = 359.0
+offset_bottom = 305.0
+scale = Vector2(1.8, 1.8)
+theme_override_colors/font_color = Color(1, 0.5137255, 0.23137255, 1)
+theme_override_fonts/font = ExtResource("3_lv1a4")
+text = "Hablar"
+
+[node name="LabelRobar" type="Label" parent="paneleleccion"]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 333.0
+offset_right = 354.0
+offset_bottom = 356.0
+scale = Vector2(1.8, 1.8)
+theme_override_colors/font_color = Color(1, 0.5137255, 0.23137255, 1)
+theme_override_fonts/font = ExtResource("3_lv1a4")
+text = "Robar"
+
+[node name="LabelNegociar" type="Label" parent="paneleleccion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.379
+anchor_right = -0.37600002
+offset_left = 628.04504
+offset_top = 379.0
+offset_right = 903.48
+offset_bottom = 454.0
+scale = Vector2(1.8, 1.8)
+theme_override_colors/font_color = Color(1, 0.5137255, 0.23137255, 1)
+theme_override_fonts/font = ExtResource("3_lv1a4")
+text = "Negociar"
+
+[node name="paneleleccionselector" type="TextureRect" parent="paneleleccion"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.023000002
+anchor_bottom = 0.057000004
+offset_left = 1.0
+offset_top = -10.0
+offset_right = 44.335
+offset_bottom = 13.700996
+scale = Vector2(13.545, 11.32)
+texture = ExtResource("5_syd8f")
+
+[node name="MinijuegoRobo" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="fondo" type="TextureRect" parent="MinijuegoRobo"]
+layout_mode = 0
+offset_left = -41.000004
+offset_top = -254.00003
+offset_right = 471.0
+offset_bottom = 257.99997
+scale = Vector2(2.455, 2.455)
+texture = ExtResource("6_upycb")
+
+[node name="zonacierto" type="TextureRect" parent="MinijuegoRobo"]
+layout_mode = 0
+offset_left = 476.00003
+offset_top = 289.0
+offset_right = 542.0
+offset_bottom = 378.0
+scale = Vector2(1.905, 1.905)
+texture = ExtResource("7_41k1q")
+
+[node name="moneda" type="TextureRect" parent="MinijuegoRobo"]
+layout_mode = 0
+offset_left = 748.0
+offset_top = 203.99998
+offset_right = 796.0
+offset_bottom = 251.99998
+scale = Vector2(1.085, 1.085)
+texture = ExtResource("8_h0vgw")

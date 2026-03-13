@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dec6yq41rvco0"]
+
+[ext_resource type="Script" uid="uid://vqqoc3sg04nd" path="res://_archivo_viejo/fauno.gd" id="1_ktlys"]
+[ext_resource type="Texture2D" uid="uid://d3uj3qqq8lvgx" path="res://_archivo_viejo/NPC/Fauno/fauno1.png" id="2_ygfce"]
+[ext_resource type="Texture2D" uid="uid://ba7dq11wehce" path="res://_archivo_viejo/NPC/Fauno/fauno2.png" id="3_khl2v"]
+[ext_resource type="Texture2D" uid="uid://c75n0nkqjfife" path="res://_archivo_viejo/NPC/Fauno/fauno3.png" id="4_vbx4p"]
+[ext_resource type="Texture2D" uid="uid://4ha2mmwoj37u" path="res://_archivo_viejo/NPC/Fauno/fauno4.png" id="5_ikn5v"]
+[ext_resource type="Texture2D" uid="uid://bdcykie0p3luj" path="res://_archivo_viejo/NPC/Fauno/fauno5.png" id="6_4ck4u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46dm7"]
+size = Vector2(20, 36)
+
+[sub_resource type="Animation" id="Animation_v6b8e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_ygfce")]
+}
+
+[sub_resource type="Animation" id="Animation_bxcwy"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23, 0.46666667, 0.7, 0.93333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_ygfce"), ExtResource("3_khl2v"), ExtResource("4_vbx4p"), ExtResource("5_ikn5v"), ExtResource("6_4ck4u")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dmrvf"]
+_data = {
+&"RESET": SubResource("Animation_v6b8e"),
+&"idle": SubResource("Animation_bxcwy")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_ktlys")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ygfce")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_46dm7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_dmrvf")
+}

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cfl1v5w8uwer2"]
+
+[ext_resource type="Script" uid="uid://bjgwf25wcqnud" path="res://escrituras/jugador/jugador.gd" id="1_8cmsc"]
+[ext_resource type="Texture2D" uid="uid://piadwl0q0x7t" path="res://media/arte/jugador/player_frame.png" id="1_vquro"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8cmsc"]
+radius = 6.0
+height = 32.0
+
+[node name="Jugador" type="CharacterBody2D" unique_id=16080948 groups=["player"]]
+script = ExtResource("1_8cmsc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1458453803]
+texture = ExtResource("1_vquro")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1358552449]
+shape = SubResource("CapsuleShape2D_8cmsc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=140155346]

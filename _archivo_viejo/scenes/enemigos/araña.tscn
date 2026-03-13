@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://w6php33akh44"]
+
+[ext_resource type="Script" uid="uid://bf5xgqm7c5raj" path="res://_archivo_viejo/scenes/araña.gd" id="1_n4n30"]
+[ext_resource type="Texture2D" uid="uid://kcyjt5io3orw" path="res://_archivo_viejo/mi creacion/malos/arañaidol2.png" id="2_0xim3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wxrf"]
+size = Vector2(34, 17)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_41s6w"]
+radius = 76.23647
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_n4n30")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_0xim3")
+flip_h = true
+region_rect = Rect2(0.19, 0, 0, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_3wxrf")
+
+[node name="DeteccionPlayer" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeteccionPlayer"]
+shape = SubResource("CircleShape2D_41s6w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

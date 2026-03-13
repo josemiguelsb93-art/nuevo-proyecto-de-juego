@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dk211bwwlc1ua"]
+
+[ext_resource type="Texture2D" uid="uid://b2cpwach5etah" path="res://_archivo_viejo/mi creacion/chabola.png" id="1_lthgl"]
+[ext_resource type="PackedScene" uid="uid://im77ys8xjax8" path="res://_archivo_viejo/scenes/Personaje.tscn" id="2_02j7r"]
+[ext_resource type="Script" uid="uid://dbenvcwpwjqfi" path="res://_archivo_viejo/scenes/puertasalidachabola.gd" id="3_inf3y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abvlw"]
+size = Vector2(16, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_inf3y"]
+size = Vector2(74, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mfdc"]
+size = Vector2(20, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7qsj"]
+size = Vector2(20, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fscl7"]
+size = Vector2(50, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbifh"]
+size = Vector2(33, 17)
+
+[node name="interior_chabola" type="Node2D"]
+
+[node name="fondo" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+texture = ExtResource("1_lthgl")
+
+[node name="SpawnPoint" type="Marker2D" parent="fondo" groups=["spawn"]]
+position = Vector2(-24, 28)
+
+[node name="Personje" parent="." instance=ExtResource("2_02j7r")]
+position = Vector2(-15, 1)
+
+[node name="puertasalidachabola" type="Area2D" parent="."]
+script = ExtResource("3_inf3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puertasalidachabola"]
+position = Vector2(-24, 44)
+shape = SubResource("RectangleShape2D_abvlw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D-superior" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-15, -42)
+shape = SubResource("RectangleShape2D_inf3y")
+
+[node name="CollisionShape2D2-izquierda" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-56, -1)
+shape = SubResource("RectangleShape2D_5mfdc")
+
+[node name="CollisionShape2D3- derecha" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(24, -1)
+shape = SubResource("RectangleShape2D_e7qsj")
+
+[node name="CollisionShape2D4- abajo1" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(11, 40)
+shape = SubResource("RectangleShape2D_fscl7")
+
+[node name="CollisionShape2D5-abajo2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-48.5, 38.5)
+shape = SubResource("RectangleShape2D_sbifh")

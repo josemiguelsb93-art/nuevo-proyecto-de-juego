@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://baheuw6045vyx"]
+
+[ext_resource type="Texture2D" uid="uid://bvqnqigufoiax" path="res://_archivo_viejo/cloacas.png" id="1_ssc7o"]
+[ext_resource type="Texture2D" uid="uid://b31tahvyn537x" path="res://_archivo_viejo/mi creacion/textura/2d_lights_and_shadows_neutral_point_light.webp" id="2_bpvww"]
+[ext_resource type="PackedScene" uid="uid://im77ys8xjax8" path="res://_archivo_viejo/scenes/Personaje.tscn" id="2_rmmgr"]
+[ext_resource type="Script" uid="uid://br6pp5hr7pfwo" path="res://_archivo_viejo/scenes/puertasalidacloaca.gd" id="3_ycwxq"]
+[ext_resource type="PackedScene" uid="uid://w6php33akh44" path="res://_archivo_viejo/scenes/enemigos/araña.tscn" id="5_p604j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycwxq"]
+size = Vector2(20, 32)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="fondo" type="Sprite2D" parent="."]
+position = Vector2(8, 5)
+texture = ExtResource("1_ssc7o")
+
+[node name="spwanpointentrada" type="Marker2D" parent="fondo" groups=["spawn"]]
+position = Vector2(-453, -447)
+gizmo_extents = 263.0
+
+[node name="Personaje" parent="." instance=ExtResource("2_rmmgr")]
+position = Vector2(-250, -364)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("5_p604j")]
+position = Vector2(-280, -365)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2(-3, 11)
+color = Color(0.19236208, 0.018679623, 0.24466355, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(-422, -372.00003)
+scale = Vector2(0.34765625, 0.50781256)
+color = Color(0.97579414, 0.6333396, 0.031838298, 1)
+texture = ExtResource("2_bpvww")
+
+[node name="PointLight2D2" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(-269, -478)
+rotation = -3.1415927
+scale = Vector2(0.34765625, 0.50781256)
+color = Color(0.97579414, 0.6333396, 0.031838298, 1)
+texture = ExtResource("2_bpvww")
+
+[node name="PointLight2D3" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(-234, -465.00003)
+scale = Vector2(0.34765625, 0.50781256)
+color = Color(0.97579414, 0.6333396, 0.031838298, 1)
+texture = ExtResource("2_bpvww")
+
+[node name="PointLight2D4" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(-214.99998, -349.00003)
+scale = Vector2(0.34765625, 0.50781256)
+color = Color(0.97579414, 0.6333396, 0.031838298, 1)
+texture = ExtResource("2_bpvww")
+
+[node name="PointLight2D5" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(-288, -344.00003)
+scale = Vector2(0.34765625, 0.50781256)
+color = Color(0.97579414, 0.6333396, 0.031838298, 1)
+texture = ExtResource("2_bpvww")
+
+[node name="PointLight2D6" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(-320, -343.00003)
+scale = Vector2(0.34765625, 0.50781256)
+color = Color(0.97579414, 0.6333396, 0.031838298, 1)
+texture = ExtResource("2_bpvww")
+
+[node name="PointLight2D7" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(-427, -372.00003)
+scale = Vector2(0.34765625, 0.50781256)
+color = Color(0.97579414, 0.6333396, 0.031838298, 1)
+texture = ExtResource("2_bpvww")
+
+[node name="PointLight2D8" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(-129, -463.00003)
+scale = Vector2(0.34765625, 0.50781256)
+color = Color(0.97579414, 0.6333396, 0.031838298, 1)
+texture = ExtResource("2_bpvww")
+
+[node name="PointLight2D9" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(-159, -343.00003)
+scale = Vector2(0.34765625, 0.50781256)
+color = Color(0.97579414, 0.6333396, 0.031838298, 1)
+texture = ExtResource("2_bpvww")
+
+[node name="PointLight2D10" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(-82, -343.00003)
+scale = Vector2(0.34765625, 0.50781256)
+color = Color(0.97579414, 0.6333396, 0.031838298, 1)
+texture = ExtResource("2_bpvww")
+
+[node name="PointLight2D11" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(-67, -421.00003)
+scale = Vector2(0.34765625, 0.50781256)
+color = Color(0.97579414, 0.6333396, 0.031838298, 1)
+texture = ExtResource("2_bpvww")
+
+[node name="PointLight2D12" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(-382, -477)
+scale = Vector2(0.34765625, 0.50781256)
+color = Color(0.97579414, 0.6333396, 0.031838298, 1)
+texture = ExtResource("2_bpvww")
+
+[node name="puertasalidacloaca" type="Area2D" parent="."]
+position = Vector2(-469, -449)
+script = ExtResource("3_ycwxq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puertasalidacloaca"]
+position = Vector2(6, 5)
+shape = SubResource("RectangleShape2D_ycwxq")

@@ -16,10 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cuq20ps75jyql" path="res://_archivo_viejo/interfaz/moneda_bronce.png" id="8_t2pro"]
 [ext_resource type="Texture2D" uid="uid://cslg0it4ws5an" path="res://_archivo_viejo/mi creacion/upstop .png" id="8_terkh"]
 [ext_resource type="Texture2D" uid="uid://b1f18cs8diano" path="res://_archivo_viejo/interfaz/barraHambre00.png" id="9_4b4ye"]
-[ext_resource type="Texture2D" uid="uid://dh3tb7h1pcnl0" path="res://_archivo_viejo/mi creacion/ilde up1.png" id="9_jrdd8"]
-[ext_resource type="Texture2D" uid="uid://cfc6vtncc0nud" path="res://_archivo_viejo/mi creacion/ilde up2 .png" id="10_7ca26"]
 [ext_resource type="Texture2D" uid="uid://44wvriw1vj4y" path="res://_archivo_viejo/interfaz/barraHambre100.png" id="10_qv3x0"]
-[ext_resource type="Texture2D" uid="uid://dh427fg8urfqt" path="res://_archivo_viejo/mi creacion/ilde up3 .png" id="11_adqoj"]
 [ext_resource type="Texture2D" uid="uid://dnirrrfofsp68" path="res://_archivo_viejo/mi creacion/walkup1 .png" id="12_7ca26"]
 [ext_resource type="Texture2D" uid="uid://vita2t8gm1jv" path="res://_archivo_viejo/mi creacion/walkup2 .png" id="13_adqoj"]
 [ext_resource type="Texture2D" uid="uid://bktygshw1i4vq" path="res://_archivo_viejo/mi creacion/left/leftstopBIEN .png" id="14_obu8q"]
@@ -65,10 +62,14 @@
 [ext_resource type="Texture2D" uid="uid://y6aqfdf7j0u7" path="res://_archivo_viejo/mi creacion/roll_right/BIEN ROLL/ROLLRI15.png" id="39_18ltl"]
 [ext_resource type="Texture2D" uid="uid://t0cwhekf7f34" path="res://_archivo_viejo/mi creacion/run_up/run up3.png" id="40_n2ohl"]
 [ext_resource type="Texture2D" uid="uid://bcycuxx8tkck0" path="res://_archivo_viejo/mi creacion/roll_right/BIEN ROLL/ROLLRI16.png" id="40_rjbso"]
+[ext_resource type="Texture2D" uid="uid://cekdredcubylj" path="res://media/arte/jugador/idle_anim/idle_up/idle_up_upstop.png" id="41_ouo61"]
 [ext_resource type="Texture2D" uid="uid://dl43ah4txi407" path="res://_archivo_viejo/mi creacion/roll_right/BIEN ROLL/ROLLRI17.png" id="41_pa036"]
 [ext_resource type="Texture2D" uid="uid://b1a7y3mucoumo" path="res://_archivo_viejo/mi creacion/run_up/run up4.png" id="41_xmq4x"]
 [ext_resource type="Texture2D" uid="uid://dfcih7cokun38" path="res://_archivo_viejo/mi creacion/roll_right/BIEN ROLL/ROLLRI18.png" id="42_cxnxm"]
+[ext_resource type="Texture2D" uid="uid://lpo2juakaqvr" path="res://media/arte/jugador/idle_anim/idle_up/idle_up_1.png" id="42_lby3x"]
 [ext_resource type="Texture2D" uid="uid://bk8klhg8qee4t" path="res://_archivo_viejo/mi creacion/roll_right/BIEN ROLL/ROLLRI19.png" id="43_apdge"]
+[ext_resource type="Texture2D" uid="uid://cgt7yh8v4cqtr" path="res://media/arte/jugador/idle_anim/idle_up/idle_up_2.png" id="43_tnslc"]
+[ext_resource type="Texture2D" uid="uid://d0yt48f34ieeu" path="res://media/arte/jugador/idle_anim/idle_up/idle_up_3.png" id="44_87ner"]
 [ext_resource type="Texture2D" uid="uid://fcn6tblbxhju" path="res://_archivo_viejo/mi creacion/roll_right/BIEN ROLL/ROLLRI20.png" id="44_joxyf"]
 [ext_resource type="Texture2D" uid="uid://cteyg5ktfcgw8" path="res://_archivo_viejo/mi creacion/roll_right/BIEN ROLL/ROLLRI21.png" id="45_7ka3k"]
 [ext_resource type="Texture2D" uid="uid://dde3eo0pram4f" path="res://_archivo_viejo/mi creacion/roll_right/BIEN ROLL/ROLLRI22.png" id="46_5rns4"]
@@ -316,7 +317,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.23, 0.46666667, 0.7, 0.93333334),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("8_terkh"), ExtResource("9_jrdd8"), ExtResource("8_terkh"), ExtResource("10_7ca26"), ExtResource("11_adqoj")]
+"values": [ExtResource("41_ouo61"), ExtResource("42_lby3x"), ExtResource("41_ouo61"), ExtResource("43_tnslc"), ExtResource("44_87ner")]
 }
 
 [sub_resource type="Animation" id="Animation_ly81d"]
@@ -541,7 +542,6 @@ script = ExtResource("1_2idrp")
 [node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody2D" unique_id=1162428591]
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="CharacterBody2D/CanvasLayer" unique_id=1301917567]
-visible = false
 offset_left = 11.0
 offset_top = -26.0
 offset_right = 177.0
@@ -552,7 +552,6 @@ texture_under = ExtResource("2_ynksr")
 texture_progress = ExtResource("3_t2pro")
 
 [node name="panelherramientas" type="HBoxContainer" parent="CharacterBody2D/CanvasLayer" unique_id=473353692]
-visible = false
 custom_minimum_size = Vector2(-0.265, 0)
 offset_left = 140.215
 offset_top = -159.53
@@ -581,7 +580,6 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="selector" type="TextureRect" parent="CharacterBody2D/CanvasLayer" unique_id=2142249192]
-visible = false
 offset_left = 340.0
 offset_top = -160.0
 offset_right = 596.0
@@ -590,7 +588,6 @@ scale = Vector2(3.595, 3.595)
 texture = ExtResource("5_ttb6c")
 
 [node name="Dinero" type="HBoxContainer" parent="CharacterBody2D/CanvasLayer" unique_id=815748834]
-visible = false
 offset_left = 873.19
 offset_top = 18.0
 offset_right = 1121.1917
@@ -621,7 +618,6 @@ layout_mode = 2
 text = "000"
 
 [node name="barrahambre" type="TextureProgressBar" parent="CharacterBody2D/CanvasLayer" unique_id=359520189]
-visible = false
 offset_left = 34.0
 offset_top = 36.0
 offset_right = 222.0

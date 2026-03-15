@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://blthy7y7a7a0n"]
+
+[ext_resource type="Texture2D" uid="uid://coe71ykw3ypuh" path="res://media/arte/jugador_ui/hp_bar/hp_bar_under-export.png" id="1_s1dbv"]
+[ext_resource type="Texture2D" uid="uid://ce3lrh0y4tilp" path="res://media/arte/jugador_ui/hp_bar/hp_bar_over.png" id="2_amoqw"]
+[ext_resource type="Texture2D" uid="uid://bf7ato6valfk0" path="res://media/arte/jugador_ui/hp_bar/hp_bar_fill-.png" id="3_amoqw"]
+
+[node name="JugadorUI" type="CanvasLayer" unique_id=2133861508]
+
+[node name="Control" type="Control" parent="." unique_id=833895678]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ProgressBar" type="TextureProgressBar" parent="Control" unique_id=1897043021]
+layout_mode = 0
+offset_right = 166.0
+offset_bottom = 43.0
+scale = Vector2(2, 2)
+nine_patch_stretch = true
+texture_under = ExtResource("1_s1dbv")
+texture_over = ExtResource("2_amoqw")
+texture_progress = ExtResource("3_amoqw")

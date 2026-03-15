@@ -366,7 +366,7 @@ offset_bottom = 373.22772
 texture = ExtResource("5_clfm4")
 
 [node name="SeccionEstadisticas" type="Control" parent="panel"]
-visible = false
+visible = true
 anchors_preset = 0
 offset_left = 264.15842
 offset_top = -48.316833
@@ -796,7 +796,7 @@ theme_override_fonts/font = ExtResource("7_oefha")
 text = "0"
 
 [node name="SeccionMisiones" type="Control" parent="panel"]
-visible = false
+visible = true
 anchors_preset = 0
 offset_left = 291.88123
 offset_top = -6.3366394

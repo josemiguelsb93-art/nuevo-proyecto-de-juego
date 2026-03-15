@@ -23,6 +23,12 @@ config/icon="res://_archivo_viejo/icon.svg"
 
 Global="*res://_archivo_viejo/global.gd"
 
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/stretch/mode="canvas_items"
+
 [file_customization]
 
 folder_colors={

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ds47w3ox3wkdm" path="res://_archivo_viejo/interfaz/mejorbarravida00.png" id="2_ynksr"]
 [ext_resource type="Texture2D" uid="uid://dwk2ebasm41nb" path="res://_archivo_viejo/interfaz/mejorbarravida100.png" id="3_t2pro"]
 [ext_resource type="Texture2D" uid="uid://bqvod0yfkj8j6" path="res://_archivo_viejo/mi creacion/walk up1 .png" id="3_wnj1w"]
-[ext_resource type="Texture2D" uid="uid://cr52h6fyi3mpm" path="res://_archivo_viejo/interfaz/inventario rapido.png" id="4_0wryj"]
+[ext_resource type="Texture2D" uid="uid://cr52h6fyi3mpm" path="res://_archivo_viejo/interfaz/hotbar.png" id="4_0wryj"]
 [ext_resource type="Texture2D" uid="uid://c4mevgw7vpimj" path="res://_archivo_viejo/mi creacion/walk up2pelo .png" id="4_wnj1w"]
 [ext_resource type="Texture2D" uid="uid://cra3ywwlnss8m" path="res://_archivo_viejo/mi creacion/silde1 .png" id="5_pbxyg"]
 [ext_resource type="Texture2D" uid="uid://cjxi1adk7rud0" path="res://_archivo_viejo/interfaz/selector panel de herramientas.png" id="5_ttb6c"]
@@ -15,8 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://dg1gye23i7ejy" path="res://_archivo_viejo/interfaz/moneda_plata.png" id="7_ynksr"]
 [ext_resource type="Texture2D" uid="uid://cuq20ps75jyql" path="res://_archivo_viejo/interfaz/moneda_bronce.png" id="8_t2pro"]
 [ext_resource type="Texture2D" uid="uid://cslg0it4ws5an" path="res://_archivo_viejo/mi creacion/upstop .png" id="8_terkh"]
-[ext_resource type="Texture2D" uid="uid://b1f18cs8diano" path="res://_archivo_viejo/interfaz/barraHambre00.png" id="9_4b4ye"]
-[ext_resource type="Texture2D" uid="uid://44wvriw1vj4y" path="res://_archivo_viejo/interfaz/barraHambre100.png" id="10_qv3x0"]
+[ext_resource type="Texture2D" uid="uid://b1f18cs8diano" path="res://media/arte/jugador_ui/hunger_bar/hunger_bar_under.png" id="9_4b4ye"]
+[ext_resource type="Texture2D" uid="uid://44wvriw1vj4y" path="res://media/arte/jugador_ui/hunger_bar/hunger_bar_fill.png" id="10_qv3x0"]
 [ext_resource type="Texture2D" uid="uid://dnirrrfofsp68" path="res://_archivo_viejo/mi creacion/walkup1 .png" id="12_7ca26"]
 [ext_resource type="Texture2D" uid="uid://vita2t8gm1jv" path="res://_archivo_viejo/mi creacion/walkup2 .png" id="13_adqoj"]
 [ext_resource type="Texture2D" uid="uid://bktygshw1i4vq" path="res://_archivo_viejo/mi creacion/left/leftstopBIEN .png" id="14_obu8q"]
@@ -623,6 +623,7 @@ offset_top = 36.0
 offset_right = 222.0
 offset_bottom = 76.0
 scale = Vector2(1.815, 1.815)
+value = 20.0
 texture_under = ExtResource("9_4b4ye")
 texture_progress = ExtResource("10_qv3x0")
 

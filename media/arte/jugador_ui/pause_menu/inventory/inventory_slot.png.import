@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1f18cs8diano"
-path="res://.godot/imported/barraHambre00.png-e2074b8e5f30b9bc327edcc8f262cb0f.ctex"
+uid="uid://bqqbvjvvcglv1"
+path="res://.godot/imported/inventory_slot.png-f7d999aca511d9c32bf0c42e24a46819.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_archivo_viejo/interfaz/barraHambre00.png"
-dest_files=["res://.godot/imported/barraHambre00.png-e2074b8e5f30b9bc327edcc8f262cb0f.ctex"]
+source_file="res://media/arte/jugador_ui/pause_menu/inventory/inventory_slot.png"
+dest_files=["res://.godot/imported/inventory_slot.png-f7d999aca511d9c32bf0c42e24a46819.ctex"]
 
 [params]
 

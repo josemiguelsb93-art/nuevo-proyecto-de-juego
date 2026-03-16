@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://borltw157up1b"]
 
 [ext_resource type="Script" uid="uid://c4arxgnlqqg7b" path="res://_archivo_viejo/scenes/dialogo_ui.gd" id="1_3r1ne"]
-[ext_resource type="Texture2D" uid="uid://cd5k0oh5k1fth" path="res://_archivo_viejo/panel de texto.png" id="2_jdcej"]
+[ext_resource type="Texture2D" uid="uid://cd5k0oh5k1fth" path="res://_archivo_viejo/interfaz/panel de texto.png" id="2_jdcej"]
 [ext_resource type="FontFile" uid="uid://p2jr8kyk8e7x" path="res://_archivo_viejo/fonts/alagard.ttf" id="3_lv1a4"]
 [ext_resource type="Texture2D" uid="uid://kkjg806ekies" path="res://_archivo_viejo/interfaz/paneleleccion.png" id="4_dpm2q"]
 [ext_resource type="Texture2D" uid="uid://i1n2faqkjolc" path="res://_archivo_viejo/interfaz/paneleleccionselector.png" id="5_syd8f"]
@@ -24,10 +24,11 @@ font_color = Color(1, 0.5137255, 0.23137255, 1)
 font = ExtResource("3_lv1a4")
 font_color = Color(0.00012632269, 0.0001251819, 0, 1)
 
-[node name="DialogoUI" type="CanvasLayer"]
+[node name="DialogoUI" type="CanvasLayer" unique_id=1936427742]
+visible = false
 script = ExtResource("1_3r1ne")
 
-[node name="PanelDialogo" type="Panel" parent="."]
+[node name="PanelDialogo" type="Panel" parent="." unique_id=723916087]
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.94000006
@@ -38,7 +39,7 @@ offset_bottom = -28.120056
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="RetratoPNG" type="TextureRect" parent="PanelDialogo"]
+[node name="RetratoPNG" type="TextureRect" parent="PanelDialogo" unique_id=888930868]
 layout_mode = 0
 offset_left = 603.0
 offset_top = -475.0
@@ -46,12 +47,12 @@ offset_right = 1531.0
 offset_bottom = 645.0
 scale = Vector2(0.505, 0.505)
 
-[node name="PanelDeTexto" type="Sprite2D" parent="PanelDialogo"]
+[node name="PanelDeTexto" type="Sprite2D" parent="PanelDialogo" unique_id=1413898001]
 position = Vector2(446, 8.9999695)
 scale = Vector2(8.757, 3.715)
 texture = ExtResource("2_jdcej")
 
-[node name="NombreLabel" type="Label" parent="PanelDialogo"]
+[node name="NombreLabel" type="Label" parent="PanelDialogo" unique_id=123238390]
 layout_mode = 0
 offset_left = 84.0
 offset_top = -57.0
@@ -61,7 +62,7 @@ rotation = -0.0060675815
 text = "ROLF"
 label_settings = SubResource("LabelSettings_h73ye")
 
-[node name="DialogoLabel" type="Label" parent="PanelDialogo"]
+[node name="DialogoLabel" type="Label" parent="PanelDialogo" unique_id=1304082155]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.055000003
@@ -74,7 +75,7 @@ label_settings = SubResource("LabelSettings_36o2c")
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="IndicadorLabel" type="Label" parent="PanelDialogo"]
+[node name="IndicadorLabel" type="Label" parent="PanelDialogo" unique_id=593982235]
 layout_mode = 1
 offset_left = 570.0
 offset_top = 69.0
@@ -84,14 +85,14 @@ text = "▼ "
 label_settings = SubResource("LabelSettings_jdcej")
 horizontal_alignment = 2
 
-[node name="paneleleccion" type="TextureRect" parent="."]
+[node name="paneleleccion" type="TextureRect" parent="." unique_id=520218379]
 offset_left = 532.0
 offset_top = -78.0
 offset_right = 1387.0
 offset_bottom = 629.0
 texture = ExtResource("4_dpm2q")
 
-[node name="LabelHablar" type="Label" parent="paneleleccion"]
+[node name="LabelHablar" type="Label" parent="paneleleccion" unique_id=872318831]
 layout_mode = 0
 offset_left = 307.0
 offset_top = 282.0
@@ -102,7 +103,7 @@ theme_override_colors/font_color = Color(1, 0.5137255, 0.23137255, 1)
 theme_override_fonts/font = ExtResource("3_lv1a4")
 text = "Hablar"
 
-[node name="LabelRobar" type="Label" parent="paneleleccion"]
+[node name="LabelRobar" type="Label" parent="paneleleccion" unique_id=197086703]
 layout_mode = 0
 offset_left = 307.0
 offset_top = 333.0
@@ -113,7 +114,7 @@ theme_override_colors/font_color = Color(1, 0.5137255, 0.23137255, 1)
 theme_override_fonts/font = ExtResource("3_lv1a4")
 text = "Robar"
 
-[node name="LabelNegociar" type="Label" parent="paneleleccion"]
+[node name="LabelNegociar" type="Label" parent="paneleleccion" unique_id=690934445]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.379
@@ -127,7 +128,7 @@ theme_override_colors/font_color = Color(1, 0.5137255, 0.23137255, 1)
 theme_override_fonts/font = ExtResource("3_lv1a4")
 text = "Negociar"
 
-[node name="paneleleccionselector" type="TextureRect" parent="paneleleccion"]
+[node name="paneleleccionselector" type="TextureRect" parent="paneleleccion" unique_id=242994908]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.023000002
@@ -139,13 +140,13 @@ offset_bottom = 13.700996
 scale = Vector2(13.545, 11.32)
 texture = ExtResource("5_syd8f")
 
-[node name="MinijuegoRobo" type="Control" parent="."]
+[node name="MinijuegoRobo" type="Control" parent="." unique_id=1909868098]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="fondo" type="TextureRect" parent="MinijuegoRobo"]
+[node name="fondo" type="TextureRect" parent="MinijuegoRobo" unique_id=1193783517]
 layout_mode = 0
 offset_left = -41.000004
 offset_top = -254.00003
@@ -154,7 +155,7 @@ offset_bottom = 257.99997
 scale = Vector2(2.455, 2.455)
 texture = ExtResource("6_upycb")
 
-[node name="zonacierto" type="TextureRect" parent="MinijuegoRobo"]
+[node name="zonacierto" type="TextureRect" parent="MinijuegoRobo" unique_id=1105651676]
 layout_mode = 0
 offset_left = 476.00003
 offset_top = 289.0
@@ -163,7 +164,7 @@ offset_bottom = 378.0
 scale = Vector2(1.905, 1.905)
 texture = ExtResource("7_41k1q")
 
-[node name="moneda" type="TextureRect" parent="MinijuegoRobo"]
+[node name="moneda" type="TextureRect" parent="MinijuegoRobo" unique_id=2079854218]
 layout_mode = 0
 offset_left = 748.0
 offset_top = 203.99998

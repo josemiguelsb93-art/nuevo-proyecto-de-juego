@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr52h6fyi3mpm"
-path="res://.godot/imported/inventario rapido.png-2ce24f90a903a0c48e69c31d583ed267.ctex"
+uid="uid://c4wqoy1nlkcl4"
+path="res://.godot/imported/casa_entrenamiento.png-0ae43b9aa33fa50c99a40c85e7682d39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_archivo_viejo/interfaz/inventario rapido.png"
-dest_files=["res://.godot/imported/inventario rapido.png-2ce24f90a903a0c48e69c31d583ed267.ctex"]
+source_file="res://media/arte/casas/casa_entrenamiento.png"
+dest_files=["res://.godot/imported/casa_entrenamiento.png-0ae43b9aa33fa50c99a40c85e7682d39.ctex"]
 
 [params]
 
